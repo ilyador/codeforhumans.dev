@@ -1,0 +1,178 @@
+@import "_mixins";
+@import "_variables";
+
+
+.site-header {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+
+  &.inner-page {
+    border-bottom: 2px solid $brand-color;
+    position: relative;
+  }
+
+  &.home-page {
+    position: fixed;
+    top: 11px;
+    z-index: 3;
+
+    h1, h4 {
+      color: white;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    h4 {
+      font-size: 24px;
+      line-height: 14px;
+      letter-spacing: 0.071em;
+    }
+
+    .logo {
+      width: 57px;
+      height: 57px;
+    }
+
+    .header-content {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+    }
+  }
+
+  h1, h4 {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 50px;
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 38px;
+    }
+  }
+
+  h4 {
+    font-size: 30px;
+    font-variant: small-caps;
+    line-height: 28px;
+    letter-spacing: 0.0785em;
+
+    @include mobile {
+      font-size: 23px;
+      line-height: 23px;
+      letter-spacing: 0.07em;
+    }
+  }
+
+  .header-content {
+    text-decoration: none;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+  }
+
+  .logo-wrap {
+    margin: 9px 16px 0 0;
+
+    @include mobile {
+      margin: 6px 12px 0 12px;
+    }
+
+    @include not-mobile {
+      margin-left: 20px;
+    }
+  }
+
+  .logo {
+    width: 65px;
+    height: 65px;
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+
+  &.home-page {
+
+  }
+
+
+  .navigation {
+    position: absolute;
+    top: 118px;
+    right: 56px;
+    display: flex;
+    z-index: 5;
+
+    @include mobile {
+      top: 101px;
+      right: 25px;
+    }
+
+    .dropdown {
+      height: 40px;
+      overflow: hidden;
+      transition: all 200ms ease-in-out;
+
+      @include mobile {
+        height: 32px;
+      }
+
+      &.show, &:hover {
+        height: 127px;
+      }
+
+      li {
+        margin-bottom: 2px;
+
+        &:not(:first-child) {
+          a {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+      background-color: $brand-color;
+      border-radius: 0 0 5px 5px;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-left: 18px;
+      white-space: nowrap;
+
+      &.active {
+        font-weight: 800;
+      }
+
+      @include mobile {
+        padding: 7px 13px;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+

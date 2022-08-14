@@ -1,0 +1,49 @@
+{
+    "paths": [
+        {
+            "name": "/pay",
+            "lambdaFunction": "stripePayFunction",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/subscribe",
+            "lambdaFunction": "stripePayFunction",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/getsubscription",
+            "lambdaFunction": "stripePayFunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "pay",
+    "apiName": "pay",
+    "functionArns": [
+        {
+            "lambdaFunction": "stripePayFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-human-ready-homepage-dev-192815-authRole",
+        "unAuthRoleName": "amplify-human-ready-homepage-dev-192815-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "stripePayFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "a23cebdd"
+}

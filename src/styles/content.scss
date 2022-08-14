@@ -1,0 +1,429 @@
+@import "_mixins";
+@import "_variables";
+
+
+.mentorship, .blog {
+  font-size: 18px;
+  line-height: 1.6;
+
+  h1, h2, h3 {
+    font-weight: 300;
+  }
+
+  strong, b {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-top: 0;
+
+    @include mobile {
+      font-size: 2em;
+      font-weight: 400;
+      margin-top: 55px;
+      line-height: 1.4;
+    }
+  }
+
+  h3 {
+    font-size: 1.333em;
+    font-weight: 600;
+  }
+
+  .youtubeEmbed {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 32px;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .youtubeEmbed iframe,
+  .youtubeEmbed object,
+  .youtubeEmbed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mobile {
+    font-size: 15px;
+
+    h3 span {
+      font-size: 16px;
+    }
+  }
+
+  @include not-mobile {
+    padding-left: 40px;
+  }
+
+  .exam {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  ul, ol {
+    margin-bottom: 0
+  }
+
+  li {
+    margin-bottom: 0.66rem;
+
+    p {
+      margin: 0 !important;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  article {
+    &:last-of-type {
+      padding-bottom: 100px;
+    }
+  }
+
+  header {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  small {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    flex: 0 0 166px;
+
+    @include mobile {
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      padding: 0;
+      margin: 20px 0 30px;
+    }
+
+    small {
+      margin: 0 14px 0 0;
+      text-align: right;
+
+      @include mobile {
+        text-align: left;
+        margin: 0 0 0 14px;
+      }
+    }
+  }
+
+  .bottom-nav {
+    margin: 80px 0;
+  }
+
+  .reviews {
+    header {
+      margin: 0;
+    }
+
+    .content {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-style: oblique;
+      font-size: 21px;
+      line-height: 1.2;
+      column-count: 2;
+      margin-top: 24px;
+
+      @include mobile {
+        column-count: 1;
+      }
+
+      p {
+        margin: 0 0 1.6em;
+
+        &:first-of-type .gatsby-resp-image-wrapper {
+          margin: 0 0 -20px !important;
+        }
+      }
+
+      strong {
+        display: block;
+        margin: 0.5em 0 0 1em;
+      }
+    }
+
+    .gatsby-resp-image-wrapper {
+      margin: 70px 0 -20px !important;
+      max-width: 1000px !important;
+
+      img, span {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50%;
+        padding-bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.course-content {
+  h3 {
+    margin: 24px 0;
+  }
+
+  h4 {
+    margin: 46px 0 10px;
+  }
+}
+
+article {
+  padding: 70px 36px 20px;
+  border-left: 2px solid $brand-color;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 100px;
+  }
+
+  &:before {
+    position: absolute;
+    display: block;
+    top: 93px;
+    left: 0;
+    width: 19px;
+    height: 2px;
+    content: '';
+    background-color: $brand-color;
+  }
+
+  &:first-of-type:before {
+    top: 108px;
+  }
+
+  .blog & {
+    &:before {
+      top: 90px;
+    }
+
+    @include mobile {
+      padding-top: 59px;
+
+      &:before {
+        top: 76px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 32px 28px 0 32px;
+
+    &:last-child {
+      padding-bottom: 100px;
+    }
+
+    &:before {
+      top: 58px;
+      width: 18px;
+    }
+
+    &:first-of-type p:first-of-type {
+      margin-top: 32px;
+    }
+  }
+
+  .header-left {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+p {
+  margin: 0.8em 0 0;
+}
+
+a {
+  color: #000
+}
+
+.boring-tech-list {
+  margin-top: 0.4em;
+
+  @include mobile {
+    font-size: 9px;
+    margin-left: 15px;
+  }
+}
+
+.tech-list-warp {
+  display: block;
+  font-size: 0;
+}
+
+.tech-list {
+  position: relative;
+  margin-left: 58px;
+  font-size: 11px;
+  color: #9e9e9e;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2px;
+  top: -2px;
+  font-style: italic;
+}
+
+.tech-list:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 134px;
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #adadad transparent;
+  display: block;
+  width: 0;
+}
+
+.tech-list:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 133px;
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #fafafa transparent;
+  display: block;
+  width: 0;
+}
+
+.testimonial {
+  margin-bottom: 4.4em;
+  font-style: italic;
+}
+
+.clientName {
+  font-weight: 700;
+  text-align: right;
+  font-size: 13px;
+  margin-top: 2.2em;
+
+  @include mobile {
+    font-size: 11px;
+  }
+}
+
+ol {
+  padding-left: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 100px;
+
+  @include not-mobile {
+    display: block;
+  }
+
+  img {
+    border: 2px solid $brand-color;
+    border-radius: 50%;
+
+    @include mobile {
+      width: 240px;
+    }
+  }
+}
+
+.testimonials {
+  color: $brand-color;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.terms li {
+  margin-top: 1.1em;
+}
+
+.warn {
+  font-size: 14px;
+  line-height: 1.4em;
+  display: inline-block;
+  margin-top: 8px;
+  color: #676767;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+.bottom-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0
+}
+
+.mailme {
+  color: $brand-color;
+}
+
+.action-button {
+  background-color: $brand-color;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  margin-top: 58px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+@include mobile {
+  ul {
+    margin-top: 4px;
+    padding-left: 26px;
+  }
+
+  ol {
+    margin-top: 4px;
+    padding-left: 15px;
+  }
+}
+
+.facebook {
+  margin-top: 60px;
+
+  @include not-mobile {
+    position: fixed;
+    left: 24px;
+    top: 114px;
+    margin-top: 0;
+  }
+}

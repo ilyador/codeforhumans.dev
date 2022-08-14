@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/getmeeting",
+            "lambdaFunction": "zoomIntegration",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/addmeeting",
+            "lambdaFunction": "zoomIntegration",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "zoom",
+    "apiName": "zoom",
+    "functionArns": [
+        {
+            "lambdaFunction": "zoomIntegration"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-human-ready-homepage-dev-192815-authRole",
+        "unAuthRoleName": "amplify-human-ready-homepage-dev-192815-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "zoomIntegration",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
